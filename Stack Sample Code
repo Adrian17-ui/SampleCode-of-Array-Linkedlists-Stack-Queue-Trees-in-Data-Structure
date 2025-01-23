@@ -1,0 +1,18 @@
+import java.util.Stack;
+
+public class BrowserHistory {
+    public static void main(String[] args) {
+        Stack<String> history = new Stack<>();
+
+        // Adding pages to the history
+        history.push("Home Page");
+        history.push("About Page");
+        history.push("Contact Page");
+
+        // Going back in history
+        if (!history.isEmpty()) {
+            String previousPage = history.pop();
+            System.out.println("Going back to: " + previousPage);
+        }
+    }
+}

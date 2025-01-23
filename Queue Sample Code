@@ -1,0 +1,19 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class CustomerService {
+    public static void main(String[] args) {
+        Queue<String> customerQueue = new LinkedList<>();
+
+        // Adding customers to the queue
+        customerQueue.add("Customer 1");
+        customerQueue.add("Customer 2");
+        customerQueue.add("Customer 3");
+
+        // Serving the next customer
+        if (!customerQueue.isEmpty()) {
+            String nextCustomer = customerQueue.poll();
+            System.out.println("Serving: " + nextCustomer);
+        }
+    }
+}

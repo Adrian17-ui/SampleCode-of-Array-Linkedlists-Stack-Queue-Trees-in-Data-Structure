@@ -1,0 +1,9 @@
+public class StudentGrades {
+    public static void main(String[] args) {
+        int[] grades = {85, 92, 78, 90, 88};
+
+        // Accessing grades
+        int firstStudentGrade = grades[0];
+        System.out.println("Grade of the first student: " + firstStudentGrade);
+    }
+}

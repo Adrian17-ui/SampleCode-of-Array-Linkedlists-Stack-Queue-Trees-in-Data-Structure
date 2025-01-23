@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class TreeNode {
+    String data;
+    List<TreeNode> children;
+
+    TreeNode(String data) {
+        this.data = data;
+        this.children = new ArrayList<>();
+    }
+
+    void addChild(TreeNode child) {
+        children.add(child);
+    }
+
+    void printTree(String prefix) {
+        System.out.println(prefix + data);
+        for (TreeNode child : children) {
+            child.printTree(prefix + "    ");
+        }
+    }
+}
+
+public class OrganizationalStructure {
+    public static void main(String[] args) {
+        // Creating the organizational structure
+        TreeNode ceo = new TreeNode("CEO");
+        TreeNode cto = new TreeNode("CTO");
+        TreeNode cfo = new TreeNode("CFO");
+        ceo.addChild(cto);
+        ceo.addChild(cfo);
+
+        TreeNode leadDev = new TreeNode("Lead Developer");
+        cto.addChild(leadDev);
+
+        TreeNode leadFin = new TreeNode("Lead Finance");
+        cfo.addChild(leadFin);
+
+        ceo.printTree("");
+    }
+}
